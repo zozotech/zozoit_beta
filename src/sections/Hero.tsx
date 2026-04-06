@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const words = ["Build", "Design", "Grow", "Transform", "Launch"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2000); // change word every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute inset-0 bg-[#ACBAC4] opacity-20" />
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-primary/20 blur-[120px] rounded-full" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-secondary/20 blur-[120px] rounded-full" />
 
@@ -27,10 +37,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[1.1] mb-8"
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] mb-8"
           >
-Innovate<br/> 
-<span className="text-gradient">Design</span> and Transform.
+We {" "}
+        <span className="text-brand-primary transition-opacity duration-500">
+          {words[index]}
+        </span>{" "}  High-Converting <br/> 
+<span className="text-gradient">Websites and Marketing Systems</span>  
 
             {/* Crafting Digital <br />
             <span className="text-gradient">Experiences</span> That <br />

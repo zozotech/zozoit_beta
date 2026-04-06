@@ -1,7 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import "tailwindcss";
-
+@plugin "daisyui";
 
 
 @theme {
@@ -9,11 +9,13 @@
   --font-display: "Ubuntu", sans-serif;
   
   /* --color-brand-primary: #ffffff; */
-  --color-brand-primary: #0ea5e9;
+  /* --color-brand-primary: #0ea5e9; */
+  /* --color-brand-primary: #329932; */
+  --color-brand-primary: #329932;
   /* --color-brand-secondary: #fff000; */
   --color-brand-secondary: #6366f1;
   /* --color-brand-accent: #fff000; */
-  --color-brand-accent: #f43f5e;
+  --color-brand-accent: #ACBAC4;
 }
 
 @layer base {

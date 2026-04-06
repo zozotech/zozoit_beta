@@ -33,6 +33,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
+  const words = ["Build", "Design", "Grow", "Transform", "Launch"];
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,16 +62,53 @@ const Navbar = () => {
         </Link>
 
   {/* 🔥 Vertical Marquee */}
-  <div className="hidden md:flex h-10 overflow-hidden text-sm text-brand-primary font-medium">
-    <Marquee direction='up' speed={50} >
-      Web Development <br />
-      Landing Page Design <br />
-      Digital Marketing <br />
-      UI/UX Design <br />
-      Branding & Identity <br />
-      Mobile App Development
-    </Marquee >
+<div className="hidden md:flex w-[500px] h-10 items-center overflow-hidden text-sm text-brand-primary font-medium">
+  <div className="marquee-vertical">
+    <div className="marquee-content">
+      <span>Web Development</span>
+      <span>Landing Page Design</span>
+      <span>Digital Marketing</span>
+      <span>UI/UX Design</span>
+      <span>Branding & Identity</span>
+      <span>Mobile App Development</span>
+
+      {/* duplicate for smooth loop */}
+      <span>Web Development</span>
+      <span>Landing Page Design</span>
+      <span>Digital Marketing</span>
+      <span>UI/UX Design</span>
+      <span>Branding & Identity</span>
+      <span>Mobile App Development</span>
+    </div>
   </div>
+
+  <style>
+    {`
+      .marquee-vertical {
+        height: 20px; /* container height = 1 item */
+        overflow: hidden;
+        position: relative;
+      }
+
+      .marquee-content {
+        display: flex;
+        flex-direction: column;
+        animation: scrollUp 12s linear infinite;
+      }
+
+      .marquee-content span {
+        height: 30px; /* same as container height */
+        display: flex;
+        align-items: center;
+      }
+
+      @keyframes scrollUp {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-240px); } /* 6 items * 40px */
+      }
+    `}
+  </style>
+</div>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
 
