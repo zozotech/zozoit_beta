@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Rocket, ChevronDown, Monitor, Layout, PenTool, BarChart, PackageSearch } from 'lucide-react';
 import { cn } from '../lib/utils';
+import Marquee from "react-fast-marquee";
 
 export const navLinks = [
     { name: 'Home', path: '/' },
@@ -50,6 +51,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
+         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform">
             <Rocket className="text-white w-6 h-6" />
@@ -57,6 +59,17 @@ const Navbar = () => {
           <span className="text-xl font-display font-bold text-white">ZoZoTECH</span>
         </Link>
 
+  {/* 🔥 Vertical Marquee */}
+  <div className="hidden md:flex h-10 overflow-hidden text-sm text-brand-primary font-medium">
+    <Marquee direction='up' speed={50} >
+      Web Development <br />
+      Landing Page Design <br />
+      Digital Marketing <br />
+      UI/UX Design <br />
+      Branding & Identity <br />
+      Mobile App Development
+    </Marquee >
+  </div>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
 
