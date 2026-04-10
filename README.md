@@ -1,8 +1,8 @@
-# 🚀 YourAgencyName
+# 🚀 ZOZOIT
 
 > We Design. We Build. We Grow Your Business.
 
-Welcome to **YourAgencyName** — a creative IT agency helping brands stand out with powerful design, development, and eCommerce solutions.
+Welcome to ZOZOIT — a creative IT agency helping brands stand out with powerful design, development, and eCommerce solutions.
 
 ---
 
@@ -17,7 +17,7 @@ From startups to established businesses — we turn ideas into impactful product
 ## 🛠️ Our Services
 
 ### 🌐 Web Development
-<img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" width="60"/>
+<img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" width="40"/>
 
 - Custom websites
 - Fast, responsive, SEO-friendly builds
