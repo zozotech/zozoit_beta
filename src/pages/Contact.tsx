@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { navLinks } from "../components/Navbar";
+import { navLinks } from "../components/navLinks";
+
 
 const Contact = () => {
 

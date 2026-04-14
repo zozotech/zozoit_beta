@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Rocket, Twitter, Github, Linkedin, Mail, Phone, MapPin, Loader2, Facebook, Instagram, Youtube } from 'lucide-react';
 import { cn } from '../lib/utils';
-import { navLinks } from './Navbar';
+import { navLinks } from './navLinks';
+
 
 const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
   const services = navLinks.find(link => link.name === 'Services')?.subMenu || [];
