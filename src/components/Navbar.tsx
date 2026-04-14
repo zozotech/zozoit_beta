@@ -14,6 +14,22 @@ const Navbar = () => {
   const location = useLocation();
   const words = ["Build", "Design", "Grow", "Transform", "Launch"];
   const [index, setIndex] = useState(0);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShow(false); // scrolling down → hide
+      } else {
+        setShow(true); // scrolling up → show
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,9 +55,13 @@ const Navbar = () => {
           </div>
           <div>
             <div className="text-xl text-center font-display font-bold text-white">ZoZoTECH</div>
-           <div className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm">
-  NEXT GEN DIGITAL AGENCY
-</div>
+      <div
+      className={`${
+        show ? "sm:inline-block" : "hidden"
+      } hidden px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm transition-all duration-300`}
+    >
+      NEXT GEN DIGITAL AGENCY
+    </div>
           </div>
         </Link>
 
