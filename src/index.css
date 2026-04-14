@@ -9,18 +9,18 @@
   --font-display: "Ubuntu", sans-serif;
   
   /* --color-brand-primary: #000000; */
-  --color-brand-primary: #0ea5e9;
+  --color-brand-primary: #00ADB5;
   /* --color-brand-primary: ##1DA1F2; */
   /* --color-brand-primary: #329932; */
   --color-brand-secondary: #6FCF97;
   /* --color-brand-secondary: #1DA1F2; */
-  --color-brand-accent: #6FCF97;
-  /* --color-brand-accent: #1DA1F2; */
+  /* --color-brand-accent: #6FCF97; */
+  --color-brand-accent: #1DA1F2;
 }
 
 @layer base {
   body {
-    @apply bg-gray-900 text-slate-200 antialiased selection:bg-brand-primary/30 selection:text-white font-sans;
+    @apply text-slate-200 antialiased selection:bg-brand-primary/30 selection:text-white font-sans;
   }
   
   h1, h2, h3, h4, h5, h6 {

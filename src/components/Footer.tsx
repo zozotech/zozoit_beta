@@ -6,7 +6,7 @@ import { navLinks } from './navLinks';
 
 
 const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
-  const services = navLinks.find(link => link.name === 'Services')?.subMenu || [];
+  const services = navLinks.find(link => link.name === 'How We Help')?.subMenu || [];
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -45,14 +45,14 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
   };
 
   return (
-    <footer className="bg-slate-950 border-t border-white/5 pt-20 pb-10 px-6">
+    <footer className="bg-slate-300 border-t border-white/5 pt-20 pb-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="space-y-6">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center">
               <Rocket className="text-white w-6 h-6" />
             </div>
-            <span className="text-xl font-display font-bold text-white">ZoZoTECH</span>
+            <span className="text-xl  font-display font-bold text-white">ZoZoTECH</span>
           </Link>
           <p className="text-slate-400 leading-relaxed">
             Empowering brands through innovative digital solutions. We build high-performance products that drive growth and engagement.
@@ -94,7 +94,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
           </ul>
         </div> */}
 <div>
-  <h4 className="text-white font-bold mb-6">Services</h4>
+  <h4 className="text-brand-primary font-bold mb-6">Services</h4>
   <ul className="space-y-4">
     {services.map((item) => (
       <li key={item.name}>
@@ -109,7 +109,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
   </ul>
 </div>
         <div>
-          <h4 className="text-white font-bold mb-6">Company</h4>
+          <h4 className="text-brand-primary font-bold mb-6">Company</h4>
           <ul className="space-y-4">
             {['About Us', 'Our Projects', 'Latest News', 'Contact', 'Careers'].map((item) => (
               <li key={item}>
@@ -122,7 +122,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-6">Newsletter</h4>
+          <h4 className="text-brand-primary font-bold mb-6">Newsletter</h4>
           <p className="text-slate-400 mb-4">Subscribe to get the latest digital trends and agency updates.</p>
           <form onSubmit={handleSubscribe} className="space-y-3">
             <input
