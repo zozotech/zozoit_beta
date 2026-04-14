@@ -37,57 +37,15 @@ const Navbar = () => {
           <div className="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform">
             <Rocket className="text-white w-6 h-6" />
           </div>
-          <span className="text-xl font-display font-bold text-white">ZoZoTECH</span>
+          <div>
+            <div className="text-xl text-center font-display font-bold text-white">ZoZoTECH</div>
+           <div className="hidden sm:inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm">
+  NEXT GEN DIGITAL AGENCY
+</div>
+          </div>
         </Link>
 
-  {/* 🔥 Vertical Marquee */}
-<div className="hidden md:flex max-w-[400px] h-10 items-center overflow-hidden text-sm text-brand-primary font-medium">
-  <div className="marquee-vertical">
-    <div className="marquee-content">
-      <span>Web Development</span>
-      <span>Landing Page Design</span>
-      <span>Digital Marketing</span>
-      <span>UI/UX Design</span>
-       <span>Branding & Identity</span>
-      <span>Mobile App Development</span>
 
-      {/* duplicate for smooth loop */}
-      <span>Web Development</span>
-      <span>Landing Page Design</span>
-      <span>Digital Marketing</span>
-      <span>UI/UX Design</span>
-      <span>Branding & Identity</span>
-      <span>Mobile App Development</span>
-    </div>
-  </div>
-
-  <style>
-    {`
-      .marquee-vertical {
-        height: 20px; /* container height = 1 item */
-        overflow: hidden;
-        position: relative;
-      }
-
-      .marquee-content {
-        display: flex;
-        flex-direction: column;
-        animation: scrollUp 12s linear infinite;
-      }
-
-      .marquee-content span {
-        height: 30px; /* same as container height */
-        display: flex;
-        align-items: center;
-      }
-
-      @keyframes scrollUp {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-240px); } /* 6 items * 40px */
-      }
-    `}
-  </style>
-</div>
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 ">
 

@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0  opacity-20" />
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-primary/20 blur-[120px] rounded-full" />
@@ -28,8 +28,55 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+           
+
+              {/* 🔥 Vertical Marquee */}
             <span className="inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-sm font-bold mb-6">
-              NEXT GEN DIGITAL AGENCY
+              <div className="marquee-vertical">
+                <div className="marquee-content">
+                  <span>Web Development</span>
+                  <span>Landing Page Design</span>
+                  <span>Digital Marketing</span>
+                  <span>UI/UX Design</span>
+                   <span>Branding & Identity</span>
+                  <span>Mobile App Development</span>
+            
+                  {/* duplicate for smooth loop */}
+                  <span>Web Development</span>
+                  <span>Landing Page Design</span>
+                  <span>Digital Marketing</span>
+                  <span>UI/UX Design</span>
+                  <span>Branding & Identity</span>
+                  <span>Mobile App Development</span>
+                </div>
+              </div>
+            
+              <style>
+                {`
+                  .marquee-vertical {
+                    height: 20px; /* container height = 1 item */
+                    overflow: hidden;
+                    position: relative;
+                  }
+            
+                  .marquee-content {
+                    display: flex;
+                    flex-direction: column;
+                    animation: scrollUp 12s linear infinite;
+                  }
+            
+                  .marquee-content span {
+                    height: 30px; /* same as container height */
+                    display: flex;
+                    align-items: center;
+                  }
+            
+                  @keyframes scrollUp {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-240px); } /* 6 items * 40px */
+                  }
+                `}
+              </style>
             </span>
           </motion.div>
 
