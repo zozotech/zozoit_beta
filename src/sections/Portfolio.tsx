@@ -6,7 +6,7 @@ import { ExternalLink, Plus } from 'lucide-react';
 
 const Portfolio = () => {
   return (
-    <section className="py-24 px-6 bg-slate-900">
+    <section className="py-24 px-6 ">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">

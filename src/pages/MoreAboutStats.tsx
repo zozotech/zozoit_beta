@@ -18,7 +18,7 @@ const stats = [
 
 const MoreAboutStats = () => {
   return (
-    <section className="min-h-screen bg-slate-950 py-24 px-6">
+    <section className="min-h-screen py-24 px-6">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <motion.h2
                     initial={{ opacity: 0, y: 20 }}

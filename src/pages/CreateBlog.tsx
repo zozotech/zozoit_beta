@@ -1,38 +1,3 @@
-// import React from "react";
-
-
-// const CreateBlog = () => {
-//   const [title, setTitle] = React.useState("");
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-
-//     const newBlog = {
-//       id: Date.now(),
-//       title,
-//       date: new Date().toLocaleDateString(),
-//       author: "Admin"
-//     };
-
-//     console.log(newBlog);
-//   };
-
-//   return (
-//     <form className="max-w-3xl mx-auto space-y-6">
-//       <input
-//         placeholder="Blog title"
-//         className="w-full p-4 bg-slate-900 text-white rounded-xl"
-//         onChange={(e) => setTitle(e.target.value)}
-//       />
-
-//       <button className="px-6 py-3 bg-brand-primary rounded-xl text-white">
-//         Publish Blog
-//       </button>
-//     </form>
-//   );
-// };
-
-// export default CreateBlog;
 
 
 import React, { useState } from "react";

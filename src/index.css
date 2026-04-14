@@ -9,27 +9,27 @@
   --font-display: "Ubuntu", sans-serif;
   
   /* --color-brand-primary: #000000; */
-  /* --color-brand-primary: #0ea5e9; */
-  --color-brand-primary: #329932;
+  --color-brand-primary: #0ea5e9;
+  /* --color-brand-primary: ##1DA1F2; */
   /* --color-brand-primary: #329932; */
-  /* --color-brand-secondary: #fff000; */
-  --color-brand-secondary: #6366f1;
-  /* --color-brand-accent: #fff000; */
-  --color-brand-accent: #ACBAC4;
+  --color-brand-secondary: #6FCF97;
+  /* --color-brand-secondary: #1DA1F2; */
+  --color-brand-accent: #6FCF97;
+  /* --color-brand-accent: #1DA1F2; */
 }
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-200 antialiased selection:bg-brand-primary/30 selection:text-white font-sans;
+    @apply bg-[#075E54] text-slate-200 antialiased selection:bg-brand-primary/30 selection:text-white font-sans;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight text-white;
+    @apply font-display font-bold tracking-tight text-black;
   }
 }
 
 .glass {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  @apply bg-white/5 backdrop-blur-lg border border-[#1DA1F2]/10;
 }
 
 .glass-dark {

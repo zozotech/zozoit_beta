@@ -49,30 +49,6 @@ const handleSend = async () => {
     }
   };
 
-// const handleToggle = async () => {
-//     // If already visible → just hide
-//     if (show) {
-//       setShow(false);
-//       return;
-//     }
-
-//     // If not loaded yet → fetch data
-//     if (subscribers.length === 0) {
-//       setLoading(true);
-//       try {
-//         const res = await fetch("http://localhost:5000/api/newsletter");
-//         const data = await res.json();
-//         setSubscribers(data);
-//       } catch (err) {
-//         console.error("Failed to fetch subscribers:", err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     }
-
-//     // Show table
-//     setShow(true);
-//   };
 
   return (
     <div className="pt-32 pb-24 px-6">

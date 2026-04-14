@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Rocket, ChevronDown, Monitor, Layout, PenTool, BarChart, PackageSearch } from 'lucide-react';
 import { cn } from '../lib/utils';
-import Marquee from "react-fast-marquee";
+
 
 export const navLinks = [
     { name: 'Home', path: '/' },
@@ -22,6 +22,45 @@ export const navLinks = [
         { name: 'Amazon FBA Consultant', path: '/services/amazon-fba-consultation', icon: PackageSearch }, //id:8
       ]
     },
+     {
+    name: 'How We Help',
+    path: '/how-we-help',
+    subMenu: [
+      { name: 'Website Design', path: '/services/web-development' },
+      { name: 'Marketing Strategy', path: '/services/seo-marketing' },
+      { name: 'Branding', path: '/services/branding' },
+      { name: 'UI/UX Design', path: '/services/ui-ux-design' },
+    ],
+  },
+   {
+    name: 'Who We Help',
+    path: '/who-we-help',
+    subMenu: [
+      { name: 'Startups', path: '/who-we-help/startups' },
+      { name: 'Small Business', path: '/who-we-help/small-business' },
+      { name: 'E-commerce', path: '/who-we-help/ecommerce' },
+    ],
+  },
+
+  {
+    name: 'Why ZoZoIT',
+    path: '/why-zozoit',
+    subMenu: [
+      { name: 'Our Process', path: '/why-zozoit/process' },
+      { name: 'Case Studies', path: '/portfolio' },
+      { name: 'Testimonials', path: '/testimonials' },
+    ],
+  },
+
+  {
+    name: 'Resources',
+    path: '/resources',
+    subMenu: [
+      { name: 'Blog', path: '/blog' },
+      { name: 'Guides', path: '/resources/guides' },
+      { name: 'FAQs', path: '/resources/faqs' },
+    ],
+  },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
@@ -69,7 +108,7 @@ const Navbar = () => {
       <span>Landing Page Design</span>
       <span>Digital Marketing</span>
       <span>UI/UX Design</span>
-      <span>Branding & Identity</span>
+       <span>Branding & Identity</span>
       <span>Mobile App Development</span>
 
       {/* duplicate for smooth loop */}
@@ -129,7 +168,8 @@ const Navbar = () => {
                   
                   {/* Dropdown Menu */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300">
-                    <div className="bg-slate-900 border border-white/10 rounded-2xl p-2 w-64 shadow-2xl backdrop-blur-xl">
+                    <div className="bg-slate-900 border border-white/10 rounded-2xl p-4 w-[500px] grid grid-cols-2 gap-2 shadow-2xl backdrop-blur-xl shadow-2xl backdrop-blur-xl">
+                    <p className="text-xs text-slate-500 mb-2">Services</p>
                       {link.subMenu.map((sub) => (
                         <Link
                           key={sub.name}
@@ -137,7 +177,9 @@ const Navbar = () => {
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-slate-300 hover:text-white transition-all group/sub"
                         >
                           <div className="w-8 h-8 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover/sub:bg-brand-primary group-hover/sub:text-white transition-colors">
-                            <sub.icon size={16} />
+                           {sub.icon && (
+  <sub.icon size={16} />
+)}
                           </div>
                           <span className="text-sm font-medium">{sub.name}</span>
                         </Link>
