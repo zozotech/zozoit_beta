@@ -94,7 +94,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
           </ul>
         </div> */}
 <div>
-  <h4 className="text-brand-primary font-bold mb-6">Services</h4>
+  <h4 className="text-white font-bold mb-6">Services</h4>
   <ul className="space-y-4">
     {services.map((item) => (
       <li key={item.name}>
@@ -109,7 +109,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
   </ul>
 </div>
         <div>
-          <h4 className="text-brand-primary font-bold mb-6">Company</h4>
+          <h4 className="text-white font-bold mb-6">Company</h4>
           <ul className="space-y-4">
             {['About Us', 'Our Projects', 'Latest News', 'Contact', 'Careers'].map((item) => (
               <li key={item}>
@@ -122,7 +122,7 @@ const Footer = ({ onNewSubscriber }: { onNewSubscriber?: () => void }) => {
         </div>
 
         <div>
-          <h4 className="text-brand-primary font-bold mb-6">Newsletter</h4>
+          <h4 className="text-white font-bold mb-6">Newsletter</h4>
           <p className="text-slate-400 mb-4">Subscribe to get the latest digital trends and agency updates.</p>
           <form onSubmit={handleSubscribe} className="space-y-3">
             <input
