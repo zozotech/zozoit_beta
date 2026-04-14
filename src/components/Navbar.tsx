@@ -41,7 +41,7 @@ const Navbar = () => {
         </Link>
 
   {/* 🔥 Vertical Marquee */}
-<div className="hidden md:flex w-[500px] h-10 items-center overflow-hidden text-sm text-brand-primary font-medium">
+<div className="hidden md:flex max-w-[400px] h-10 items-center overflow-hidden text-sm text-brand-primary font-medium">
   <div className="marquee-vertical">
     <div className="marquee-content">
       <span>Web Development</span>
@@ -109,19 +109,26 @@ const Navbar = () => {
                   {/* Dropdown Menu */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-300">
                     <div className="bg-slate-900 border border-white/10 rounded-2xl p-4 w-[500px] grid grid-cols-2 gap-2 shadow-2xl backdrop-blur-xl shadow-2xl backdrop-blur-xl">
-                    <p className="text-xs text-slate-500 mb-2">Services</p>
+                    
                       {link.subMenu.map((sub) => (
                         <Link
                           key={sub.name}
                           to={sub.path}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-slate-300 hover:text-white transition-all group/sub"
                         >
-                          <div className="w-8 h-8 rounded-lg bg-brand-primary/10 flex items-center justify-center text-brand-primary group-hover/sub:bg-brand-primary group-hover/sub:text-white transition-colors">
-                           {sub.icon && (
-  <sub.icon size={16} />
-)}
-                          </div>
-                          <span className="text-sm font-medium">{sub.name}</span>
+                          
+                          {/* <span className="text-sm font-medium">{sub.name}</span> */}
+                          <div className="flex flex-col">
+                            <div className='flex'>
+                              <div className="w-8 h-8 rounded-lg overflow-hidden bg-brand-primary/10 flex items-center justify-center text-brand-primary transition-all duration-200 group-hover/sub:bg-brand-primary group-hover/sub:text-white mr-2">
+  {sub.icon && <sub.icon size={16} />}
+</div>
+  <span className="text-sm font-medium">{sub.name}</span>
+                            </div>
+  <span className="text-xs text-slate-400 leading-snug">
+    {sub.description}
+  </span>
+</div>
                         </Link>
                       ))}
                     </div>

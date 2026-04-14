@@ -7,7 +7,7 @@ export const navLinks = [
         name: 'How We Help', 
       path: '/services',
       subMenu: [
-        { name: 'Website Design', path: '/services/web-development', icon: Monitor }, //id:1
+        { name: 'Website Design', path: '/services/web-development', icon: Monitor, description: 'Make a positive impression with your target customers where it matters most' }, //id:1
         { name: 'Landing Page Design', path: '/services/landing-page', icon: Layout }, //id:9
         { name: 'E-commerce Solutions', path: '/services/ecommerce', icon: Layout }, //id:2
         { name: 'Logo Design', path: '/services/logo-design', icon: PenTool }, // id:7
@@ -50,6 +50,6 @@ export const navLinks = [
   },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
-    { name: 'Blog', path: '/blog' },
+  
     { name: 'Contact', path: '/contact' },
   ];
