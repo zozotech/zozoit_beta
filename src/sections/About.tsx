@@ -115,7 +115,7 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="space-y-2"
               >
-                <div className="text-4xl font-display font-extrabold text-white">{stat.value}</div>
+                <div className="text-4xl font-display font-extrabold text-brand-primary">{stat.value}</div>
                 <div className="text-slate-500 font-medium uppercase tracking-wider text-xs">{stat.label}</div>
               </motion.div>
             ))}
