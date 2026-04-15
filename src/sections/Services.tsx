@@ -59,13 +59,13 @@ if (!Icon) return null; // prevents crash if icon not found
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="glass p-10 rounded-3xl group hover:border-brand-primary/50 transition-all duration-300"
+                className="glass p-10 rounded-3xl group hover:border-brand-primary transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors">
                   <Icon size={32} className="text-brand-primary group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
-                <p className="text-slate-400 leading-relaxed mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-brand-primary/60 group-hover:text-brand-primary transition-colors">{service.title}</h3>
+                <p className="text-slate-900 leading-relaxed mb-8">
                   {service.description}
                 </p>
                 {/* <a href={service.slug} className="text-brand-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
